@@ -1,0 +1,21 @@
+<template name="suggestion">
+	<div class="col l4 suggestion">
+		<div class="card hoverable blue-grey darken-3 white-text">
+			<div class="card-content blue-grey darken-2">
+				<span class="card-title">Submitted By: {{submittedBy}}</span>
+				<p>{{body}}</p>
+			</div>
+			<div data-tooltip="CodeIt!" class="codeIt tooltipped btn-move-up btn-floating right {{#if codedIt}}disabled{{else}}waves-effect waves-light red{{/if}}">
+				<i class="material-icons">code</i>
+			</div>
+			{{#if createdSuggestion}}
+				<div data-tooltip="Delete" class="right tooltipped delete card-delete-btn btn-floating red waves-effect waves-light">
+					<i class="material-icons">close</i>
+				</div>
+			{{/if}}
+			<div class="card-action">
+				<span>{{codeIts}} CodeIts!</span>
+			</div>
+		</div>
+	</div>
+</template>

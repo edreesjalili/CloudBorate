@@ -1,0 +1,29 @@
+<template name="postItem">
+	<div class="post card hoverable">
+		<div class="post-content row valign-wrapper">
+			<div class="col l1 {{boxColor}} votes">
+				<h4 class="center-align white-text">{{upvotes}}</h4>
+				<p class="white-text center-align">{{votesText}}</p>
+			</div>
+			<div class="col l10">
+				<h5 class="truncate"><a href="{{pathFor route='postPage'}}">{{course}}: {{title}}</a></h5>
+				<p class="grey-text text-lighten valign-wrapper">{{commentsCount}} {{commentsText}} | Submitted By: {{author}}&nbsp;
+					<span class="grey-text text-lighten">| Created At: {{createdTime}}&nbsp;</span>
+					{{#if displayEdited}}
+						<span class="grey-text text-lighten">| Edited At: {{editedTime}}&nbsp;</span>
+					{{/if}}
+					{{#if owner}}
+						<span>| <a href="{{pathFor route='postEdit'}}">Edit Post</a></span>
+					{{/if}}
+				</p>
+			</div>
+			<div class="col l1 center-align">
+				{{#if displayUpvote}}
+					<button class="btn-large orange waves-effect upvote">
+						<i class="material-icons">plus_one</i>
+					</button>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

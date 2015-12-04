@@ -1,0 +1,17 @@
+<template name="comment">
+	<li class="card-panel row valign-wrapper">
+		<div class="col l1 orange darken-1 white-text center-align">
+			<h5>{{likes}}</h5>
+			<span>{{likesText}}</span>
+		</div>
+		<div class="col l10 valign">
+			<p>{{body}}</p>
+			<span>Comment by: {{submittedBy}} | Commented at: {{commentTime}}</span>
+		</div>
+		{{#if liked}}
+			<div class="col l1  center-align valign">
+				<button class="btn cyan like-comment">Like</button>
+			</div>
+		{{/if}}
+	</li>
+</template>

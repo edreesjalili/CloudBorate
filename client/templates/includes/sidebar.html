@@ -1,0 +1,17 @@
+<template name="sidebar">
+	<ul id="slide-out" class="side-nav fixed leftside-navigation">
+		{{#if signedIn}}
+			<li><a href="{{pathFor route='postsList'}}">All Posts</a></li>
+			<li><a href="{{pathFor route='postSubmit'}}">Submit Post</a></li>
+			<li><a href="#" id="view-notifications">Notifications<span class="new badge orange">{{notificationCount}}</span></a></li>
+			<li><a href="{{pathFor route='usersPosts' data=getUser}}">Your Posts</a></li>
+			<li><a href="{{pathFor route='usersComments' data=getUser}}">Your Comments</a></li>
+			<li><a href="{{pathFor route='suggestionsList'}}">Suggestions</a></li>
+			<li><a href="#" id="logout">Sign Out</a></li>
+		{{else}}
+			<li>Sign in to see more options</li>
+			<li><a href="{{pathFor route='postsList'}}">All Posts</a></li>
+			<li><a href="#" id="login" class="modal-trigger" data-target="signIn">Sign-In</a></li>
+		{{/if}}
+	</ul>
+</template>

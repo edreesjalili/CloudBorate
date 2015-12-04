@@ -1,0 +1,23 @@
+<template name="postSubmit">
+	<div class="row card-panel">
+		<form id="createNewPost">
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="course" type="text" class="validate">
+					<label for="course">Course</label>
+				</div>
+				<div class="input-field col s6">
+					<input id="title" type="text" class="validate">
+					<label for="title">Title</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="body" class="materialize-textarea validate"></textarea>
+					<label for="body">Body</label>
+				</div>
+			</div>
+			<button type="submit" id="submit" class="btn waves-effect orange right">Submit<i class="material-icons right">send</i></button>
+		</form>
+	</div>
+</template>

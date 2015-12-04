@@ -1,0 +1,14 @@
+<template name="notification">
+	<div class="col l4">
+		<div class="card hoverable">
+			<div class="card-content">
+				<span class="card-title">{{commentAuthor}} commented on a post!</span>
+				<p class="truncate">{{commentBody}}</p>
+			</div>
+			<div class="card-action">
+				<a href="{{postLink}}" class="view-notification">View</a>
+				<a href="#" class="dismiss-notification">Dismiss</a>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,15 @@
+<template name="postPage">
+	{{#with post}}
+		{{> postItem}}
+	{{/with}}
+	<ul id="comments" class="container">
+		{{#each comments}}
+			{{> comment}}
+		{{/each}}
+	</ul>
+	{{#if loggedIn}}
+		{{> commentBox}}
+	{{else}}
+		<p>Please log in to leave a comment!</p>
+	{{/if}}
+</template>

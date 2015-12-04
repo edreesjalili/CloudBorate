@@ -1,0 +1,50 @@
+.left-sidebar-nav {
+	position: fixed;
+    width: 100px;
+    left: 180px;
+    z-index: 999;
+    height: auto;
+
+}
+
+.side-nav {
+    top: 64px;
+    width: 300px;
+}
+
+.leftside-navigation a {
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 12pt;
+    height: 56px;
+    line-height: 56px;
+}
+
+.btn-move-up, .card-delete-btn {
+    position: relative;
+    top: -16px;
+    margin-right: 10px !important;
+}
+
+.suggestion p{
+    overflow: auto;
+}
+
+#comment-body {
+    height: 100px;
+}
+
+main {
+    padding-left: 300px;
+}
+
+#iron-router-progress {
+    background-color : #ff9800;
+    box-shadow       : 0 0 5px lightgrey;
+}
+
+@media only screen and (max-width : 992px) {
+    main {
+      padding-left: 0;
+    }
+  }

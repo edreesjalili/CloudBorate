@@ -1,0 +1,26 @@
+<template name="navbar">
+	<header>
+		<div id="signIn" class="modal">
+			<div class="modal-content">
+				{{> atForm}}
+			</div>
+		</div>
+		<div class="navbar-fixed">
+			<nav class="grey darken-3">
+				<div class="nav-wrapper row">
+					<div class="brand-logo left col l2 left-align">
+						<a href="{{pathFor route='postsList'}}">CloudBorate</a>
+						<span class="thin">0.4.2</span>
+					</div>
+					<form class="col l10 right hide">
+						<div class="input-field">
+							<input id="search" type="search" required placeholder="Search For Posts">
+							<label for="search"><i class="material-icons">search</i></label>
+							<i class="material-icons">close</i>
+						</div>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header>
+</template>

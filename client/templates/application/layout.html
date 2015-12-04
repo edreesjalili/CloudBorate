@@ -1,0 +1,13 @@
+<template name="layout">
+	{{> navbar}}
+	{{> notifications}}
+	<main class="row">
+		<aside class="left-sidebar-nav">
+			{{> sidebar}}
+		</aside>
+		<section class="col l12">
+			{{> errors}}
+			{{> yield}}
+		</section>
+	</main>
+</template>

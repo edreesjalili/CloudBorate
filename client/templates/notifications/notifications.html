@@ -1,0 +1,16 @@
+<template name="notifications">
+	<div id="notificationsModal" class="modal bottom-sheet footer-fixed">
+		<div class="modal-content row">
+			{{#if notes}}
+				{{#each notifications}}
+					{{> notification}}
+				{{/each}}
+			{{else}}
+				<h3 class="center-align">No New Notifications!</h3>
+			{{/if}}
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-red orange btn">Done</a>
+		</div>
+	</div>
+</template>
