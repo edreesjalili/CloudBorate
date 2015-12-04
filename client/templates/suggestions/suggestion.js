@@ -24,6 +24,10 @@ Template.suggestion.onRendered(function() {
 	});
 });
 
+Template.suggestion.onDestroyed(function() {
+	$(".tooltipped").tooltip('remove');
+});
+
 Template.suggestion.events({
 	"click .codeIt": function(event) {
 		Meteor.call('codeIt', this._id);
